@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://blackapps.cl/ofw/ofw.xsd">
+	
+	<!--HomeController-->
+	<requestMapping name="index.htm" 		   class="HomeController"  			  method="index"/>
+	<requestMapping name="results.htm" 		   class="HomeController"  			  method="results"/>
+	<requestMapping name="error.htm" 		   class="HomeController"  			  method="error"/>
+	
+	<!--CargarArchivosController-->
+	<requestMapping name="setCoordenadas.htm"  class="CargarArchivosController"   method="cargarCoordenadas" ajaxResponse="json"/>
+	<requestMapping name="cbmComplete.htm"     class="CargarArchivosController"   method="cbmComplete" 		 ajaxResponse="json"/>
+	<requestMapping name="completeTable.htm"   class="CargarArchivosController"   method="completeTable"  	 ajaxResponse="json"/>
+	<requestMapping name="inTXT.htm"  		   class="CargarArchivosController"   method="insertXY" 		 ajaxResponse="json"/>
+	
+	<!--ModificarTXTController-->
+	<requestMapping name="upParametros.htm"	   class="ModificarTXTController"   method="updateParametros"  ajaxResponse="json"/>
+	<requestMapping name="updateXY.htm"        class="ModificarTXTController"   method="updateXY" 		   ajaxResponse="json"/>
+	
+	<!--RESULTS -->
+	<requestMapping name="setDefecto.htm"        class="ResultadosController"   method="setDefecto" 		ajaxResponse="json"/>
+	<requestMapping name="setModificado.htm"        class="ResultadosController"   method="setModificado" 		ajaxResponse="json"/>
+	
+	<!-- -->
+	<requestMapping name="setConsoleDef.htm"        class="CargarArchivosController"   method="setConsoleDef" 		ajaxResponse="json"/>
+	<requestMapping name="setConsoleMod.htm"        class="ModificarTXTController"   method="setConsoleMod" 		ajaxResponse="json"/>
+	
+</siteMap> 

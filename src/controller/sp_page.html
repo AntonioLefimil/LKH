@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Analisis de sensibilidad y Calibracion de Parametros</title>
+		<link href="webapp/views/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="webapp/views/css/freelancer.min.css" rel="stylesheet">
+		<link href="webapp/views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<body id="page-top" class="index">
+		<!-- Navigation -->
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+					</button>
+					<img  src="webapp/views/img/logo-facultad.png" href="#page-top" width="200" height="70">
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+					<ul class="nav navbar-nav navbar-right" >
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="page-scroll">
+							<a href="index.htm" style="color: #061d2f">Home</a>
+						</li>
+						<li class="page-scroll">
+							<a href="#contact" style="color: #061d2f">Sub-Problem</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header style="height: 450px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="intro-text">
+							<span class="name" style="font-size:40px">Análisis de Sensibilidad y Calibración de Parámetros</span>	
+						</div>
+						<img class="img-responsive" src="webapp/views/img/lkhimage.png" width="250" height="250">
+						<span class="skills">LKH Version 2.0.7 (November 2012) </span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Portfolio Grid Section -->
+		<section id="contact"style="height: 350px;">
+			<div class="container">
+				<div class="intro-text" >
+					<div style="width:1140px; margin:auto">
+					<hr>
+						<h4 class="name" style="font-size:30px">SUB PROBLEM TOUR FILE:</h4>	
+						<p align="justify" style="font-size:20px">Especifica el nombre de un archivo que contiene un tour que debe utilizarse para dividir el problema original en subproblemas. El número aproximado de nodos en cada uno viene dado por SUBPROBLEM_SIZE. El recorrido está dada por una lista de enteros que proporcionan la secuencia en la que los nodos se visitan en el tour. El recorrido termina con un -1</p>
+					<hr>
+					</div>
+				</div>
+				<div class="panel panel-default" style="width:760px;margin-left:25px">
+					<div class="panel-heading" style="width:730px">SUB-PROBLEM TOUR FILE</div>
+					<div class="panel-body" style="width:750px">
+						<form id="sp_problem" style="width:100%">
+							<div id= "group_1" style="margin-bottom:20px">	
+								<input id="A01" style="margin-right:20px" type="number" min="0" max="42" value="1"  style="width:40px">
+								<input id="A02" style="margin-right:20px" type="number" min="0" max="42" value="20"  style="width:40px">
+								<input id="A03" style="margin-right:20px" type="number" min="0" max="42" value="21"  style="width:40px">
+								<input id="A04" style="margin-right:20px" type="number" min="0" max="42" value="22"  style="width:40px">
+								<input id="A05" style="margin-right:20px" type="number" min="0" max="42" value="23"  style="width:40px">
+								<input id="A06" style="margin-right:20px" type="number" min="0" max="42" value="39"  style="width:40px">
+								<input id="A07" style="margin-right:20px" type="number" min="0" max="42" value="38"  style="width:40px">
+								<input id="A08" style="margin-right:20px" type="number" min="0" max="42" value="40"  style="width:40px">
+								<input id="A09" style="margin-right:20px" type="number" min="0" max="42" value="41"  style="width:40px">
+								<input id="A10" style="margin-right:20px" type="number" min="0" max="42" value="42"  style="width:40px">
+								<input id="A11"  type="number" min="0" max="43" value="24"  style="width:40px">
+							</div>
+							<div id= "group_2" style="margin-bottom:20px">
+								<input id="A12" style="margin-right:20px" type="number" min="0" max="42" value="11"  style="width:40px">
+								<input id="A13" style="margin-right:20px" type="number" min="0" max="42" value="10"  style="width:40px">
+								<input id="A14" style="margin-right:20px" type="number" min="0" max="42" value="9"  style="width:40px">
+								<input id="A15" style="margin-right:20px" type="number" min="0" max="42" value="8"  style="width:40px">
+								<input id="A16" style="margin-right:20px" type="number" min="0" max="42" value="7"  style="width:40px">
+								<input id="A17" style="margin-right:20px" type="number" min="0" max="42" value="6"  style="width:40px">
+								<input id="A18" style="margin-right:20px" type="number" min="0" max="42" value="12"  style="width:40px">
+								<input id="A19" style="margin-right:20px" type="number" min="0" max="42" value="2"  style="width:40px">
+								<input id="A20" style="margin-right:20px" type="number" min="0" max="42" value="5"  style="width:40px">
+								<input id="A21" style="margin-right:20px" type="number" min="0" max="42" value="13"  style="width:40px">
+								<input id="A22" type="number" min="0" max="43" value="14"  style="width:40px">
+							</div>
+							<div id= "group_3" style="margin-bottom:20px">
+								<input id="A23" style="margin-right:20px" type="number" min="0" max="42" value="15"  style="width:40px">
+								<input id="A24" style="margin-right:20px" type="number" min="0" max="42" value="17"  style="width:40px">
+								<input id="A25" style="margin-right:20px" type="number" min="0" max="42" value="25"  style="width:40px">
+								<input id="A26" style="margin-right:20px" type="number" min="0" max="42" value="19"  style="width:40px">
+								<input id="A27" style="margin-right:20px" type="number" min="0" max="42" value="4"  style="width:40px">
+								<input id="A28" style="margin-right:20px" type="number" min="0" max="42" value="3"  style="width:40px">
+								<input id="A29" style="margin-right:20px" type="number" min="0" max="42" value="43"  style="width:40px">
+								<input id="A30" style="margin-right:20px" type="number" min="0" max="42" value="16"  style="width:40px">
+								<input id="A31" style="margin-right:20px" type="number" min="0" max="42" value="26"  style="width:40px">
+								<input id="A32" style="margin-right:20px" type="number" min="0" max="42" value="37"  style="width:40px">
+								<input id="A33" type="number" min="0" max="42" value="36"  >
+							</div>
+							<div id= "group_4" style="margin-bottom:20px">
+								<input id="A34" type="number" min="0" max="43" value="35"  style="width:40px;margin-right:20px">
+								<input id="A35" style="margin-right:20px" type="number" min="0" max="42" value="34"  style="width:40px">
+								<input id="A36" style="margin-right:20px" type="number" min="0" max="42" value="33"  style="width:40px">
+								<input id="A37" style="margin-right:20px" type="number" min="0" max="42" value="32"  style="width:40px">
+								<input id="A38" style="margin-right:20px" type="number" min="0" max="42" value="31"  style="width:40px">
+								<input id="A39" style="margin-right:20px" type="number" min="0" max="42" value="30"  style="width:40px">
+								<input id="A40" style="margin-right:20px" type="number" min="0" max="42" value="29"  style="width:40px">
+								<input id="A41" style="margin-right:20px" type="number" min="0" max="42" value="28"  style="width:40px">
+								<input id="A42" style="margin-right:20px" type="number" min="0" max="42" value="18"  style="width:40px">
+								<input id="A43" style="margin-right:20px" type="number" min="0" max="42" value="27"  style="width:40px">
+							</div>
+								<div class="panel-footer" style="width:730px;margin-left:-15px;margin-top:30px;height:50px">
+									<button id="btnForm" type="button" class="btn btn-success" style="margin-left:35%;margin-top:10px;">Enviar Solución</button>
+								</div>
+						</form>
+						<div id="column2" style="width:48%;float:right;margin-right:-49%;margin-top:-297px;">
+							<table class="table table-striped" style="">
+								<thead>
+									<tr>
+										<th>Instrucciones</th>
+									</tr>
+								</thead>
+								<tbody id="form1">
+									<tr>
+										<td>Nº de nodos 43</td>
+									</tr>
+									<tr>
+										<td>Escriba en el formulario la solucion que usted desee</td>
+									</tr>
+									<tr>
+										<td>No se puede repertir el nodo</td>
+									</tr>
+									<tr>
+										<td>Esta instancia se resolverá con parametros por defecto</td>
+									</tr>
+									<tr>
+										<td>Se realizará la comparación con una instancia resuelta con parámetros por defecto</td>
+									</tr>
+									<tr>
+										<td>Analice los resultados</td>
+									</tr>
+								<tbody/>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr style="width:1140px; margin-top:-50px">
+		</section>
+		
+		<!-- Contact Section -->
+		<section id="contact" style="margin-top:200px">
+			<div class="container">
+				<div class="panel panel-info">
+					<div id="frHeader" class="panel-heading" style="background-color:#b8bdc1">
+						<span style="font-size:x-large">REFERENCIAS</span>
+					</div>
+					<div  class="panel-body">
+						<p 	align=justify>
+							-	Lin, Shen ; Kernighan, BW (1973). "Un heurístico algoritmo efectivo para el problema del viajante" Investigación de Operaciones 21 (2):.. 498-516 doi : 10.1287 / opre.21.2.498 .</br>
+							-	K. Helsgaun (2000). "Una aplicación efectiva del viajante de comercio Lin y Kernighan heurístico" European Journal of Operational Research 126 (1):.. 106-130 doi : 10.1016 / S0377-2217 (99) 00284-2 .</br>
+							-	Johnson, David S .; McGeoch, Lyle A. (1997). "The Traveling problema del vendedor: Un estudio de caso en la optimización local". En EHL Aarts y JK Lenstra . Búsqueda local en la optimización combinatoria (PDF). Londres: John Wiley and Sons. pp. 215-310.</br>
+							-	GA CROES (1958). Un método para resolver los problemas del viajante de comercio.
+						
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="text-center" style="margin-top:-90px">
+			<div class="footer-above" style="height:110px">
+				<div class="container" style="margin-top:15px">
+					<div class="row" style="margin-top:-2%">
+						<div class="col-md-1" >
+							<img src="webapp/views/img/logo-unab-footer.png" style="margin-top:-35px; margin-left:50px" width="80" height="70">
+						</div>
+						<div class="col-md-2" style="margin-top:-25px; margin-left:36px">
+							<span class="skills">Universidad Andres Bello </span></br>
+							<span class="skills">Facultad de Ingeniería </span></br>
+							<span class="skills">Av. Antonio Varas #1118</span>
+						</div>
+						<div class="col-md-3" style="margin-top:-25px;margin-left:-35px">
+							<span class="skills">Profesor Guía</span></br>
+							<span class="skills">Dr. Gustavo Gatica</span></br>
+							<span class="skills">Contacto: gatica.unab@gmail.com</span>
+						</div>
+						<div class="col-md-4" style="margin-top:-25px;margin-left:-105px;">
+							<span class="skills">Profesor Co-Guía</span></br>
+							<span class="skills">Dr. Rodrigo Linfati</span></br>
+							<span class="skills">rlinfati@ubiobio.cl</span></br>
+						</div>
+						<div class="col-md-5" style="margin-top:-60px;float:right;margin-right:5px;">						
+							<span class="skills">J. Antonio Lefimil Toro</span></br>
+							<span class="skills">Estudiante Ing. en Compt. e Informática</span></br>
+							<span class="skills">j.lefimiltoro@uandresbello.edu</span></br>
+						</div>
+						<div class="col-md-5" style="margin-top:10px;float:left;width:100%;">						
+							<span class="skills">2016-2018 CONICYT-FONDECYT, Iniciación, Chile - FONDECYT: 11150370, Principal Investigator</span></br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+		<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+		<a class="btn btn-primary" href="#page-top">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+		</div>
+		<script src="webapp/views/js/jquery.min.js"></script>
+		<script src="webapp/views/js/bootstrap.min.js"></script>
+		<script src="webapp/views/js/jqBootstrapValidation.js"></script>
+		<script src="webapp/views/js/freelancer.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script>
+			function updateSProblem(){
+			
+				var A01 = $('#A01').val(); var A07 = $('#A07').val(); var A13 = $('#A13').val();var A19 = $('#A19').val();var A25 = $('#A25').val();var A31 = $('#A31').val();var A37 = $('#A37').val();
+				var A02 = $('#A02').val(); var A08 = $('#A08').val(); var A14 = $('#A14').val();var A20 = $('#A20').val();var A26 = $('#A26').val();var A32 = $('#A32').val();var A38 = $('#A38').val();
+				var A03 = $('#A03').val(); var A09 = $('#A09').val(); var A15 = $('#A15').val();var A21 = $('#A21').val();var A27 = $('#A27').val();var A33 = $('#A33').val();var A39 = $('#A39').val();
+				var A04 = $('#A04').val(); var A10 = $('#A10').val(); var A16 = $('#A16').val();var A22 = $('#A22').val();var A28 = $('#A28').val();var A34 = $('#A34').val();var A40 = $('#A40').val();
+				var A05 = $('#A05').val(); var A11 = $('#A11').val(); var A17 = $('#A17').val();var A23 = $('#A23').val();var A29 = $('#A29').val();var A35 = $('#A35').val();var A41 = $('#A41').val();
+				var A06 = $('#A06').val(); var A12 = $('#A12').val(); var A18 = $('#A18').val();var A24 = $('#A24').val();var A30 = $('#A30').val();var A36 = $('#A36').val();var A42 = $('#A42').val();
+				var A43 = $('#A43').val();
+				
+				$.getJSON('updateSProblem.htm', {				
+					'A01' : A01, 'A07' :A07, 'A13' :A13, 'A19' :A19 ,'A25' :A25, 'A31' :A31 , 'A37' : A37,
+					'A02' : A02, 'A08' :A08, 'A14' :A14, 'A20' :A20 ,'A26' :A26, 'A32' :A32 , 'A38' : A38,
+					'A03' : A03, 'A09' :A09, 'A15' :A15, 'A21' :A21 ,'A27' :A27, 'A33' :A33 , 'A39' : A39,
+					'A04' : A04, 'A10' :A10, 'A16' :A16, 'A22' :A22 ,'A28' :A28, 'A34' :A34 , 'A40' : A40,
+					'A05' : A05, 'A11' :A11, 'A17' :A17, 'A23' :A23 ,'A29' :A29, 'A35' :A35 , 'A41' : A41,
+					'A06' : A06, 'A12' :A12, 'A18' :A18, 'A24' :A24 ,'A30' :A30, 'A36' :A36 , 'A42' : A42,
+					'A43' : A43
+				})
+				.fail(function(){})
+				.done(function(d){
+					if(d.CodResult == 'E'){
+						location.reload;
+					}				
+				});
+			}
+		$(function(){
+			$('#btnForm').bind("click",function(){
+				updateSProblem();
+				location.href="sp_page_2.htm";
+			});
+			
+		});
+	</script>
+	</body>
+</html>

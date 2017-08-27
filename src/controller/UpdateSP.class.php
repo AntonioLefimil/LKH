@@ -1,0 +1,94 @@
+<?php
+class UpdateSP{
+	
+	public $A01;
+	public $A02;
+	public $A03;
+	public $A04;
+	public $A05;
+	public $A06;
+	public $A07;
+	public $A08;
+	public $A09;
+	public $A10;
+	public $A11;
+	public $A12;
+	public $A13;
+	public $A14;
+	public $A15;
+	public $A16;
+	public $A17;
+	public $A18;
+	public $A19;
+	public $A20;
+	public $A21;
+	public $A22;
+	public $A23;
+	public $A24;
+	public $A25;
+	public $A26;
+	public $A27;
+	public $A28;
+	public $A29;
+	public $A30;
+	public $A31;
+	public $A32;
+	public $A33;
+	public $A34;
+	public $A35;
+	public $A36;
+	public $A37;
+	public $A38;
+	public $A39;
+	public $A40;
+	public $A41;
+	public $A42;
+	public $A43;
+
+	public function __construct($A01,$A02,$A03,$A04,$A05,$A06,$A07,$A08,$A09,$A10,$A11,$A12,$A13,$A14,$A15,$A16,$A17,$A18,$A19,$A20,$A21,$A22,$A23,$A24,$A25,$A26,$A27,$A28,$A29,$A30,$A31,$A32,$A33,$A34,$A35,$A36,$A37,$A38,$A39,$A40,$A41,$A42,$A43){
+	
+		$this-> A01 = $A01;
+		$this-> A02 = $A02;
+		$this-> A03 = $A03;
+		$this-> A04 = $A04;
+		$this-> A05 = $A05;
+		$this-> A06 = $A06;
+		$this-> A07 = $A07;
+		$this-> A08 = $A08;
+		$this-> A09 = $A09;
+		$this-> A10 = $A10;
+		$this-> A11 = $A11;
+		$this-> A12 = $A12;
+		$this-> A13 = $A13;
+		$this-> A14 = $A14;
+		$this-> A15 = $A15;
+		$this-> A16 = $A16;
+		$this-> A17 = $A17;
+		$this-> A18 = $A18;
+		$this-> A19 = $A19;
+		$this-> A20 = $A20;
+		$this-> A21 = $A21;
+		$this-> A22 = $A22;
+		$this-> A23 = $A23;
+		$this-> A24 = $A24;
+		$this-> A25 = $A25;
+		$this-> A26 = $A26;
+		$this-> A27 = $A27;
+		$this-> A28 = $A28;
+		$this-> A29 = $A29;
+		$this-> A30 = $A02;
+		$this-> A31 = $A02;
+		$this-> A32 = $A02;
+		$this-> A33 = $A02;
+		$this-> A34 = $A02;
+		$this-> A35 = $A02;
+		$this-> A36 = $A36;
+		$this-> A37 = $A37;
+		$this-> A38 = $A37;
+		$this-> A39 = $A37;
+		$this-> A40 = $A40;
+		$this-> A41 = $A41;
+		$this-> A42 = $A42;
+		$this-> A43 = $A43;
+	}
+} 

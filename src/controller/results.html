@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Analisis de sensibilidad y Calibracion de Parametros</title>
+		<link href="webapp/views/vendor2/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="webapp/views/css/freelancer.min.css" rel="stylesheet">	   
+		<link href="webapp/views/vendor2/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<body id="page-top" class="index">
+		<!-- Navigation -->
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+					</button>
+					<img  src="webapp/views/img/logo-facultad.png" href="#page-top" width="200" height="70">
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+					<ul class="nav navbar-nav navbar-right" >
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="page-scroll">
+							<a href="index.htm" style="color: #061d2f">Home</a>
+						</li>
+						<li class="page-scroll">
+							<a href="#results" style="color: #061d2f">Resultados</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header style="margin-top:-50px">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12" style="background: white;">
+						<div class="intro-text">
+							<span class="name" style="font-size:40px">Análisis de Sensibilidad y/o Calibración de Parámetros</span>	
+						</div>
+						<img class="img-responsive" src="webapp/views/img/lkhimage.png" width="250" height="250">
+						<span class="skills">LKH Version 2.0.7 (November 2012) </span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="success" id="results" style="margin-top:-5%">
+			<h3 style="color: white;text-align:center;margin-top:-50px">Resultados</h3></br>
+			<div class="container">
+				<div class="row"><div class="col-lg-12 text-center" style="margin-top: -23%;background-color:#730112;float: left;margin-left: 127%;"><h2 style="color: white;">Resultados</h2></div></div>
+				<div id="frHeader" class="panel panel-primary" style="background-color:#356176">
+					<div class="panel-heading" style="height:50px; background-color:#d9dadb">
+						<div id="btnHead" style="float:right">
+							<button id="btn0" type="button" style="background-color:#18bc9c" class="btn btn-primary">Descripción</button>
+							<button id="btn1" type="button" style="background-color:#18bc9c" class="btn btn-primary">Resultados</button>
+							<button id="btn3" type="button" style="background-color:#18bc9c" class="btn btn-primary">Output</button>
+							<button id="btn2" type="button" style="background-color:#18bc9c" class="btn btn-primary">Parametros</button>
+						</div>
+					</div>
+					<div class="panel-body" style="background-color: white;">
+						<div id="resultados0">
+							<img class="img-responsive" src="webapp/views/img/seudocodigo modificado.png" style="width:100%;height: 600px;">
+						</div>
+						<div id="resultados1">
+							<div class="row">
+								<div class="panel panel-danger" style="float: left;width: 500px;margin-left:40px;">
+									<div class="panel-heading">DEFECTO</div>
+									<div class="panel-body">
+										<div class="col-lg-4 col-lg-offset-2"style="margin-left:5%">
+											<div id="pos">
+												<div id="Defecto" style="width: 480px;margin-left: -50px;margin-top:-15px;"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-danger" style="float: left;width: 500px;margin-left: 20px;">
+									<div class="panel-heading">MODIFICADO</div>
+									<div class="panel-body">
+										<div class="col-lg-4">
+											<div id="pos1">
+												<div id="Modificado"style="width:480px;margin-left: -25px;margin-top:-15px"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="resultados2" color=black>
+							<form id="form" method="POST">
+								<div id="form" class="panel-body" style="font color=black">
+									<table class="table table-striped" style="width:1108px;margin-left:-14px;margin-top:-35px;margin-bottom:10px">
+										<thead><tr><th>NOMBRE</th><th>DESCRIPCIÓN</th><th style="width:10%">VALOR</th></tr></thead>
+										<tbody id="form1">
+											<tr>
+												<td>CANDIDATE_SET_TYPE</td>
+												<td align=justify>Specifies the candidate set type. ALPHA is LKH's default type. It is applicable in general. The other three types can only be used for instances given by coordinates. The optional suffix PURE for the DELAUNAY type specifies that only edges of the Delaunay graph are used as candidates. Default: ALPHA.</td>
+												<td><select id="CANDIDATE_SET_TYPE" data-role="slider" data-track-theme="c" data-theme="c"style="width:100%	">
+														<option value="ALPHA">ALPHA</option>
+														<option value="DELAUNAY">DELAUNAY</option>
+														<option value="NEAREST-NEIGHBOR">NEAREST-NEIGHBOR</option>
+														<option value="QUADRANT">QUADRANT</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>INITIAL_TOUR_ALGORITHM</td>
+												<td align=justify>Especifica el algoritmo para la obtención de un recorrido inicial. Por defecto: WALK</td>
+												<td><select id="INITIAL_TOUR_ALGORITHM" data-role="slider" data-track-theme="c" data-theme="c"style="width:100%">
+														<option value="WALK">WALK</option>
+														<option value="BORUVKA">BORUVKA</option>
+														<option value="GREEDY">GREEDY</option>
+														<option value="NEAREST-NEIGHBOR">NEAREST-NEIGHBOR</option>
+														<option value="QUICK-BORUVKA">QUICK-BORUVKA</option>
+														<option value="SIERPINSKI">SIERPINSKI</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>EXTRA_CANDIDATES</td>
+												<td align=justify>Número de candidato adicional de bordes para ser añadido al conjunto de candidatos de cada nodo. Por defecto: 0.</td>
+												<td><input id="EXTRA_CANDIDATES" type="number" min="0"  value="0" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>SEED</td>
+												<td align=justify>Especifica la semilla inicial para la generación de números aleatorios. Por defecto: 1.</td>
+												<td><input id="SEED" type="number" min="0"  value="1" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>GAIN_CRITERION</td>
+												<td align=justify>Especifica si se utiliza Lin y Kernighan del criterio de la ganancia. Por defecto: SÍ.</td>
+												<td>
+													<select id="sliderGAIN_CRITERION" data-role="slider" data-track-theme="c" data-theme="c">
+														<option value="YES">SI</option>
+														<option value="NO">NO</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>BACKTRACKING</td>
+												<td align=justify>Especifica si un retroceso K-opt movimiento es para ser utilizado como el primer paso en una secuencia de movimientos (cuando = TIPO DE MOVIMIENTO). Por defecto NO.</td>
+												<td>
+													<select id="sliderBACKTRACKING" data-role="slider" data-track-theme="c" data-theme="c">
+														<option value="NO">NO</option>
+														<option value="YES">SI</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+										<tbody id="form2">
+											<tr>
+												<td>RESTRICTED_SEARCH</td>
+												<td align=justify>Especifica si se usa la siguiente técnica de búsqueda poda. Por defecto: SÍ.</td>
+												<td>
+													<select id="sliderRESTRICTED_SEARCH" data-role="slider" data-track-theme="c" data-theme="c">
+														<option value="YES">SI</option>
+														<option value="NO">NO</option>
+													</select>												
+												</td>
+											</tr>
+											<tr>
+												<td>MOVE_TYPE</td>
+												<td align=justify>Especifica el tipo de movimiento que se utilizará para todos los siguientes movimientos. El valor K> = 2 significa que un movimiento K-opt se va a utilizar. El valor 0 significa que todos los movimientos son del mismo tipo (K = MOVE_TYPE). Por defecto: 0.</td>
+												<td><input id="MOVE_TYPE" type="number" min="0"  value="5" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>ASCENT_CANDIDATES</td>
+												<td align=justify>El número de bordes candidato para ser asociado a cada nodo. Por Defecto 50 </td>
+												<td><input id="ASCENT_CANDIDATES" type="number" min="1"  value="42" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>INITIAL_PERIOD</td>
+												<td align=justify>La duración del primer periodo en el ascenso. Por defecto: valor de DIMENSION / 2 (pero por lo menos 100).</td>
+												<td><input id="INITIAL_PERIOD" type="number" min="1"  value="100" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>INITIAL_STEP_SIZE</td>
+												<td align=justify>El tamaño del paso inicial utilizado en el ascenso. Por defecto: 1. </td>
+												<td><input id="INITIAL_STEP_SIZE" type="number" min="1"  value="1" name="lname" style="width:40px"></td>
+											</tr>
+										</tbody>
+										<tbody id="form3">
+											<tr>
+												<td>STOP_AT_OPTIMUM</td>
+												<td align=justify>Especifica si se interrumpe un desplazamiento, si la longitud de recorrido se hace igual al óptimo.Por defecto: SÍ.</td>
+												<td><select id="sliderSTOP_AT_OPTIMUM" data-role="slider" data-track-theme="c" data-theme="c">
+														<option value="YES">SI</option>
+														<option value="NO">NO</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>SUBGRADIENT</td>
+												<td align=justify>Especifica si los valores de pi deben ser determinados por la optimización subgradiente. Por defecto: SÍ.</td>
+												<td><select id="sliderSUBGRADIENT" data-role="slider" data-track-theme="c" data-theme="c">														<option value="YES">SI</option>
+															<option value="NO">NO</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>RUNS</td>
+												<td align=justify>(Entero) El número total de carreras.</td>
+												<td><input id="RUNS" type="number" min="0"  value="10" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>POPULATION_SIZE</td>
+												<td align=justify>(Entero) Especifica el tamaño máximo de la población en el algoritmo genético de LKH. Por defecto: 0.</td>
+												<td><input id="POPULATION_SIZE" type="number" min="0"  value="0"  name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>MAX_TRIALS</td>
+												<td align=justify>(Entero) El número máximo de los ensayos en cada ejecución. Por defecto: número de nodos (dimensión, que figuran en el archivo del problema).</td>
+												<td><input id="MAX_TRIALS" type="number" min="0"  value="43" name="lname" style="width:40px"></td>
+											</tr>
+										</tbody>
+										<tbody id="form4">
+											<tr>
+												<td>NONSEQUENTIAL_MOVE_TYPE</td>
+												<td align=justify>(Entero) Especifica el tipo de movimiento no secuencial para ser utilizado. Un valor K> = 4 significa que los intentos se ha intentado mejorar un recorrido por no secuenciales k-opt mueve en 4  k  K. Nótese, sin embargo, que el efecto depende de las especificaciones de PATCHING_A y PATCHING_B. Por defecto: valor de (+ MOVE_TYPE PATCHING_A + PATCHING_B - 1).</td>
+												<td><input id="NONSEQUENTIAL_MOVE_TYPE" type="number" min="0"  value="9" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>PRECISION</td>
+												<td align=justify>(Entero) La precisión interna en la representación de distancias transformadas: d [i] [j] = PRECISION * c [i] [j] + pi [i] + pi [j], donde d [i] [j], c [i] [j], pi [i] y pi [j] son ​​todos integral. Por defecto: 100 (que corresponde a 2 cifras decimales).</td>
+												<td><input id="PRECISION" type="number" min="0"  value="100" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>TIME_LIMIT</td>
+												<td align=justify>Entero) Especifica un límite de tiempo en segundos para cada ejecución. Por defecto: valor de DBL_MAX. </td>
+												<td><input id="TIME_LIMIT" type="number" min="0"  value="0" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>TRACE_LEVEL</td>
+												<td align=justify>(Entero) Especifica el nivel de detalle de la salida dada durante el proceso de solución. El valor 0 significa una cantidad mínima de salida. Cuanto mayor sea el valor es el más información se dado. Por defecto: 1.</td>
+												<td><input id="TRACE_LEVEL" type="number" min="0"  value="1" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>GAIN23</td>
+												<td align=justify>Especifica si se utiliza la función Gain23, Por defecto: SÍ.</td>
+												<td>
+													<select id="sliderGAIN23" data-role="slider" data-track-theme="c" data-theme="c">
+														<option value="YES">SI</option>
+														<option value="NO">NO</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+										<tbody id="form5">
+											<tr>
+												<td>SUBSEQUENT_PATCHING</td>
+												<td align=justify>Especifica si los parches se utiliza para los movimientos siguientes el primer paso en una secuencia de se mueve. Por defecto: SÍ.</td>
+												<td>
+													<select id="sliderSUBSEQUENT_PATCHING" data-role="slider" data-track-theme="c" data-theme="c">
+														<option value="YES">SI</option>
+														<option value="NO">NO</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>KICKS</td>
+												<td align=justify>(Entero) Especifica el número de veces para "desconectar" un recorrido encontrado por Lin y Kernighan. Cada patada es una Tiro al azar K-swap. Sin embargo, si TIROS es cero, entonces estrategia especial de patadas LKH, WALK, se utiliza en lugar de él. Por defecto: 1.</td>
+												<td><input id="KICKS" type="number" min="0"  value="1" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>KICK_TYPE</td>
+												<td align=justify>(Entero) Especifica el valor de K para un saque de K-swap aleatoria (una extensión de la doble puente movimiento). Si KICK_TYPE es cero, entonces estrategia especial patadas del LKH, paseo, se utiliza. Por defecto:</td>
+												<td><input id="KICK_TYPE" type="number" min="0"  value="0" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>BACKBONE_TRIALS</td>
+												<td align=justify>(Entero) El número de ensayos columna vertebral en cada ejecución. Por defecto: 0 </td>
+												<td><input id="BACKBONE_TRIALS" type="number" value="0" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>MAX_CANDIDATES</td>
+												<td align=justify>(Entero) El número máximo de candidato bordes para ser asociada a cada nodo. El número entero puede ser seguido por la SYMMETRIC palabra clave, lo que significa que el conjunto de candidatos es ser complementado tal que cada borde candidato se asocia con ambos de sus dos nodos finales. Si MAX_CANDIDATES es cero los conjuntos de candidatos se componen de los bordes representados en el CANDIDATE_FILEs, la INITIAL_TOUR_FILE, la INPUT_TOUR_FILE, la SUBPROBLEM_TOUR_FILE, y los MERGE_TOUR_FILEs. Por defecto: 5.</td>
+												<td><input id="MAX_CANDIDATES" type="number" min="0"  value="5" name="lname" style="width:40px"></td>
+											</tr>
+											<tr>
+												<td>MAX_SWAPS</td>
+												<td align=justify>(Entero) Especifica el número máximo de permutas (voltea) permitidos en cualquier búsqueda de una mejora de gira.Por defecto: valor de dimensión.</td>
+												<td><input id="MAX_SWAPS" type="number" min="0"  value="43" name="lname" style="width:40px"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="panel-footer" style="background-color:#b8bdc1;width:100%;margin-left:0px;margin-top:-15px">
+									<div id="frHeader" class="panel-heading" style="background-color:#101010">
+										<button id="btnForm" type="button" class="btn btn-success">Actualizar Parámetros y Ejecutar LKH</button>
+										<div id="btnHead" style="float:right;">
+											<button id="step1" type="button" class="btn btn-primary">1</button>
+											<button id="step2" type="button" class="btn btn-primary">2</button>
+											<button id="step3" type="button" class="btn btn-primary">3</button>
+											<button id="step4" type="button" class="btn btn-primary">4</button>
+											<button id="step5" type="button" class="btn btn-primary">5</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div id="resultados3">
+							<div class="panel panel-danger" style="width:471px;height:500px;margin-left:60px;float:left;">
+								<div class="panel-heading">OUTPUT ESTADO DEFECTO</div>
+								<div class="panel-body" style="width:471px;height:450px;overflow-y: scroll">
+									<div id="console1"  style="display: table;float: left;width:106%;margin-top:-15px;margin-left:-10px"></div>
+								</div>
+							</div>
+							<div class="panel panel-danger" style="float:right;width:467px;height:500px;margin-right:60px;">
+								<div class="panel-heading">MODIFICADO</div>
+								<div class="panel-body" style="width:467px;height:450px;overflow-y: scroll">
+									<div id="console3" class="pre-scrollable" style="display:table;float:right;width:450px;margin-top:-15px;margin-right:-15px"></div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</section>				
+		<section id="contact" style="background-color: white;height: 300px;">
+			<div class="container" style="background-color: white;margin-top: -5%;">
+				<div class="panel panel-info" style="font-size="15px">
+					<div id="frHeader" class="panel-heading" style="background-color:#b8bdc1"><span style="font-size:x-large">REFERENCIAS</span></div>
+					<div  class="panel-body"><p	align=justify>
+						-	Lin, Shen ; Kernighan, BW (1973). "Un heurístico algoritmo efectivo para el problema del viajante" Investigación de Operaciones 21 (2):.. 498-516 doi : 10.1287 / opre.21.2.498 .</br>
+						-	K. Helsgaun (2000). "Una aplicación efectiva del viajante de comercio Lin y Kernighan heurístico" European Journal of Operational Research 126 (1):.. 106-130 doi : 10.1016 / S0377-2217 (99) 00284-2 .</br>
+						-	Johnson, David S .; McGeoch, Lyle A. (1997). "The Traveling problema del vendedor: Un estudio de caso en la optimización local". En EHL Aarts y JK Lenstra . Búsqueda local en la optimización combinatoria (PDF). Londres: John Wiley and Sons. pp. 215-310.</br>
+						-	GA CROES (1958). Un método para resolver los problemas del viajante de comercio.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="text-center"  style="margin-top: -2%;">
+			<div class="footer-above">
+				<div class="container">
+					<div class="row" style="margin-top:-1%; background-color: #730112;">
+						<div class="col-md-1" >
+							<img src="webapp/views/img/logo-unab-footer.png" style="margin-top:-35px; margin-left:50px" width="80" height="70">
+						</div>
+						<div class="col-md-2" style="margin-top:-25px; margin-left:36px">
+							<span class="skills">Universidad Andres Bello </span></br>
+							<span class="skills">Facultad de Ingeniería </span></br>
+							<span class="skills">Av. Antonio Varas #1118</span>
+						</div>
+						<div class="col-md-3" style="margin-top:-25px;margin-left:-35px">
+							<span class="skills">Profesor Guía</span></br>
+							<span class="skills">Dr. Gustavo Gatica</span></br>
+							<span class="skills">Contacto: gatica.unab@gmail.com</span>
+						</div>
+						<div class="col-md-4" style="margin-top:-25px;margin-left:-105px;">
+							<span class="skills">Profesor Co-Guía</span></br>
+							<span class="skills">Dr. Rodrigo Linfati</span></br>
+							<span class="skills">rlinfati@ubiobio.cl</span></br>
+						</div>
+						<div class="col-md-5" style="margin-top:-60px;float:right;margin-right:5px;">						
+							<span class="skills">J. Antonio Lefimil Toro</span></br>
+							<span class="skills">Estudiante Ing. en Compt. e Informática</span></br>
+							<span class="skills">j.lefimiltoro@uandresbello.edu</span></br>
+						</div>
+						<div class="col-md-5" style="margin-top:10px;float:left;width:100%;">						
+							<span class="skills">2016-2018 CONICYT-FONDECYT, Iniciación, Chile - FONDECYT: 11150370, Principal Investigator</span></br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+		<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+		<a class="btn btn-primary" href="#page-top">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+		</div>
+		<script src="webapp/views/js/jquery.min.js"></script>
+		<script src="webapp/views/js/bootstrap.min.js"></script>
+		<script src="webapp/views/js/jqBootstrapValidation.js"></script>
+		<script src="webapp/views/js/freelancer.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script>
+			function setConsoleMod(){
+				$.getJSON('setConsoleMod.htm')
+				.fail(function(){alert("No se pudo obtener los resultados de la instancia modificada");})
+				.done(function(d){
+						t = d.cmd;
+						for(var i= 1; i<d.cmd.length-1; i++){
+							if((i%2) == 0){
+								$('<div>').css("background-color", "#d9dadb").append($('<div>').addClass('cell').text(t[i]))
+								.appendTo('#console3');
+							}else{
+								$('<div>').css("background-color", "white").append($('<div>').addClass('cell').text(t[i]))
+								.appendTo('#console3');
+							}
+						}
+					});
+			}
+			function setConsoleDef(){
+				$.getJSON('setConsoleDef.htm')
+					.fail(function(){alert("No se pudo obtener los resultados de la instancia por Defecto");})
+					.done(function(d){
+						t = d.cmd;
+						for(var i= 1; i<d.cmd.length-1; i++){
+							if((i%2) == 0){
+								$('<div>').css("background-color","#d9dadb").append($('<div>').text(t[i]))
+								.appendTo('#console1');
+							}else{
+								$('<div>').css("background-color","white").append($('<div>').text(t[i]))
+								.appendTo('#console1');
+							}
+						}
+					});
+			}
+			function setDefecto(){
+					$.getJSON('setDefecto.htm')
+					.fail(function(){alert("No se pudo obtener las coodenadas de la instancia por defecto");})
+					.done(function(d){
+						var data2 = [];					
+						for (var i=0; i < d.tour.length; i++){
+							var t = d.tour;
+							data2.push([parseInt(t[i].eje_x), parseInt(t[i].eje_y)]);
+						}
+						data2.push([parseInt(t[0].eje_x), parseInt(t[0].eje_y)]);
+						$("#Defecto").zingchart({
+							"data":{
+							"type": "line",
+							"plotarea": {
+								"adjust-layout":true /* For automatic margin adjustment. */
+							},
+							"scale-x": {
+								"label":{ /* Add a scale title with a label object. */
+										"text":"Eje X",
+								},
+							},
+							"scale-y": {
+								"label":{ /* Add a scale title with a label object. */
+										"text":"Eje Y",
+								},
+							},
+							  "series": [{ "values": data2 }]
+							}
+						});  
+					});
+			}
+			function setModificado(){
+					$.getJSON('setModificado.htm')
+					.fail(function(){alert("No se pudo obtener las coordenadas de la instancia modificada");})
+					.done(function(d){
+						var data2 = [];					
+						for (var i =0; i < d.tour.length; i++){
+							var t = d.tour;
+							data2.push([parseInt(t[i].eje_x), parseInt(t[i].eje_y)]);
+						}
+						data2.push([parseInt(t[0].eje_x), parseInt(t[0].eje_y)]);
+						$("#Modificado").zingchart({
+							"data":{
+								"type": "line",
+								"plotarea": {
+								"adjust-layout":true /* For automatic margin adjustment. */
+								},
+								"scale-x": {
+									"label":{ /* Add a scale title with a label object. */
+										"text":"Eje X",
+									},
+								},
+								"scale-y": {
+									"label":{ /* Add a scale title with a label object. */
+										"text":"Eje Y",
+									},
+								},
+								"series": [{ "values": data2 }]
+							}
+						});
+				});	
+			}
+		function updateParametros(){
+			
+			var CANDIDATE_SET_TYPE			= $('#CANDIDATE_SET_TYPE').val();	var INITIAL_TOUR_ALGORITHM 		= $('#INITIAL_TOUR_ALGORITHM').val();
+			var EXTRA_CANDIDATES			= $('#EXTRA_CANDIDATES').val();		var SEED 						= $('#SEED').val(); 	
+			var sliderGAIN_CRITERION	 	= $('#sliderGAIN_CRITERION').val();	var sliderBACKTRACKING			= $('#sliderBACKTRACKING').val();
+			var sliderRESTRICTED_SEARCH		= $('#sliderRESTRICTED_SEARCH').val();	var MOVE_TYPE					= $('#MOVE_TYPE').val();				
+			var ASCENT_CANDIDATES			= $('#ASCENT_CANDIDATES').val();	var INITIAL_PERIOD				= $('#INITIAL_PERIOD').val();
+			var INITIAL_STEP_SIZE			= $('#INITIAL_STEP_SIZE').val();	var sliderSTOP_AT_OPTIMUM		= $('#sliderSTOP_AT_OPTIMUM').val();	
+			var sliderSUBGRADIENT	  	 	= $('#sliderSUBGRADIENT').val();	var RUNS						= $('#RUNS').val();
+			var POPULATION_SIZE				= $('#POPULATION_SIZE').val();		var MAX_TRIALS					= $('#MAX_TRIALS').val();
+			var NONSEQUENTIAL_MOVE_TYPE		= $('#NONSEQUENTIAL_MOVE_TYPE').val();	var PRECISION 					= $('#PRECISION').val();
+			var TIME_LIMIT 					= $('#TIME_LIMIT').val();			var TRACE_LEVEL 				= $('#TRACE_LEVEL').val();				
+			var sliderGAIN23			 	= $('#sliderGAIN23').val();			var sliderSUBSEQUENT_PATCHING	= $('#sliderSUBSEQUENT_PATCHING').val();
+			var KICKS						= $('#KICKS').val();				var KICK_TYPE					= $('#KICK_TYPE').val();				
+			var BACKBONE_TRIALS				= $('#BACKBONE_TRIALS').val();		var MAX_CANDIDATES				= $('#MAX_CANDIDATES').val();
+			var MAX_SWAPS					= $('#MAX_SWAPS').val();				
+			
+			$.getJSON('upParametros.htm', {	
+			'CANDIDATE_SET_TYPE'	: CANDIDATE_SET_TYPE,		'INITIAL_TOUR_ALGORITHM': INITIAL_TOUR_ALGORITHM,
+			'EXTRA_CANDIDATES'		: EXTRA_CANDIDATES,			'SEED'					: SEED,
+			'sliderGAIN_CRITERION'	: sliderGAIN_CRITERION,		'sliderBACKTRACKING'	: sliderBACKTRACKING,
+			'sliderRESTRICTED_SEARCH': sliderRESTRICTED_SEARCH,	'MOVE_TYPE'				: MOVE_TYPE,				
+			'ASCENT_CANDIDATES'		:ASCENT_CANDIDATES,			'INITIAL_PERIOD'		:INITIAL_PERIOD,
+			'INITIAL_STEP_SIZE'		:INITIAL_STEP_SIZE,			'sliderSTOP_AT_OPTIMUM'	: sliderSTOP_AT_OPTIMUM,	
+			'sliderSUBGRADIENT'		: sliderSUBGRADIENT,		'RUNS'					: RUNS, 
+			'POPULATION_SIZE'		: POPULATION_SIZE,			'MAX_TRIALS'			: MAX_TRIALS,
+			'NONSEQUENTIAL_MOVE_TYPE': NONSEQUENTIAL_MOVE_TYPE, 'PRECISION'				: PRECISION, 
+			'TIME_LIMIT'			: TIME_LIMIT,				'TRACE_LEVEL'			: TRACE_LEVEL,
+			'sliderGAIN23'			: sliderGAIN23,				'sliderSUBSEQUENT_PATCHING': sliderSUBSEQUENT_PATCHING,
+			'KICKS'					: KICKS,					'KICK_TYPE'				: KICK_TYPE,	
+			'BACKBONE_TRIALS'		: BACKBONE_TRIALS, 			'MAX_CANDIDATES'		: MAX_CANDIDATES,
+			'MAX_SWAPS'				: MAX_SWAPS,
+			
+			
+											})
+			.fail(function(){})
+			.done(function(d){
+				if(d.CodResult == 'E'){
+					location.reload;
+				}				
+			});
+		}
+		
+		$(function(){
+			setDefecto(); setModificado(); setConsoleMod(); setConsoleDef();	
+			$("#resultados3").hide(1);
+			$("#resultados2").hide(1);
+			$("#resultados1").hide(1);
+			$("#form1").hide(); $("#form2").hide();	$("#form3").hide();	$("#form4").hide(); $("#form5").hide(); 
+			$("#console1").hide();$("#console3").hide();
+			
+			$('#step1').bind("click",function(){	$("#form1").show(500);	$("#form2").hide(500);	$("#form3").hide(500);	$("#form4").hide(500); $("#form5").hide(500);	});
+			$('#step2').bind("click",function(){	$("#form1").hide(500);	$("#form2").show(500); 	$("#form3").hide(500);	$("#form4").hide(500); $("#form5").hide(500);	});
+			$('#step3').bind("click",function(){	$("#form1").hide(500);	$("#form2").hide(500);	$("#form3").show(500);	$("#form4").hide(500); $("#form5").hide(500);	});
+			$('#step4').bind("click",function(){	$("#form1").hide(500);	$("#form2").hide(500);	$("#form3").hide(500);	$("#form4").show(500); $("#form5").hide(500);	});
+			$('#step5').bind("click",function(){	$("#form1").hide(500);	$("#form2").hide(500);	$("#form3").hide(500);	$("#form4").hide(500); $("#form5").show(500);	});
+			
+			$('#btn0').bind("click",function(){		$("#resultados0").show(1);	$("#resultados1").hide(1);	$("#resultados2").hide(500);	$("#resultados3").hide(500);	$("#resultados4").hide(500);	});
+			$('#btn1').bind("click",function(){		$("#resultados0").hide(1);	$("#resultados1").show(1);	$("#resultados2").hide(500);	$("#resultados3").hide(500);	$("#resultados4").hide(500);	});
+			$('#btn2').bind("click",function(){		$("#resultados0").hide(1);	$("#form1").show(500); $("#form2").hide(500);	$("#form3").hide(500);	$("#form4").hide(500); $("#form5").hide(500);	$("#resultados1").hide(500);	$("#resultados2").show(500); 	$("#resultados3").hide(500);	$("#resultados4").hide(500); 	});
+			$('#btn3').bind("click",function(){	
+					$("#resultados0").hide(1);	$("#resultados3").show(500);	$("#console1").show(500);	$("#console3").show(500);	$("#resultados1").hide(500);	$("#resultados2").hide(500);	$("#resultados4").hide(500);
+			});
+			
+			$('#btn4').bind("click",function(){	$("#resultados1").hide(500);	$("#resultados2").hide(500);	$("#resultados3").hide(500);	$("#resultados4").show(500);	});
+
+			$('#btnForm').bind("click",function(){
+				updateParametros();
+				location.href="results.htm";	
+			});
+		});
+	</script>
+	</body>
+</html>

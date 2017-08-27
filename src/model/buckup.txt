@@ -1,0 +1,258 @@
+$('#sliderSTOP_AT_OPTIMUM').val();
+$('#sliderSUBGRADIENT').val();
+$('#sliderSUBSEQUENT_PATCHING').val();
+$('#sliderGAIN23').val();
+$('#sliderGAIN_CRITERION').val();
+$('#sliderBACKTRACKING').val();
+$('#sliderRESTRICTED_SEARCH').val();
+$('#RUNS').val();
+$('#BACKBONE_TRIALS').val();
+$('#KICKS').val();
+$('#KICK_TYPE').val();
+$('#MAX_CANDIDATES').val();
+$('#MAX_SWAPS').val();
+$('#MAX_TRIALS').val();
+$('#MOVE_TYPE').val();
+$('#NONSEQUENTIAL_MOVE_TYPE').val();
+$('#POPULATION_SIZE').val();
+$('#PRECISION').val();
+$('#SEED').val();
+$('#TIME_LIMIT').val();
+$('#TRACE_LEVEL').val();
+
+'sliderSTOP_AT_OPTIMUM'		: sliderSTOP_AT_OPTIMUM, 
+'sliderSUBGRADIENT'			: sliderSUBGRADIENT, 
+'sliderSUBSEQUENT_PATCHING'	: sliderSUBSEQUENT_PATCHING,
+'sliderGAIN23'				: sliderGAIN23, 
+'sliderGAIN_CRITERION'		: sliderGAIN_CRITERION, 
+'sliderBACKTRACKING'		: sliderBACKTRACKING,
+'sliderRESTRICTED_SEARCH'	: sliderRESTRICTED_SEARCH, 
+'RUNS'						: RUNS, 
+'BACKBONE_TRIALS'			: BACKBONE_TRIALS,
+'KICKS'						: KICKS, 
+'KICK_TYPE'					: KICK_TYPE, 
+'MAX_CANDIDATES'			: MAX_CANDIDATES,
+'MAX_SWAPS'					: MAX_SWAPS, 
+'MAX_TRIALS'				: MAX_TRIALS, 
+'MOVE_TYPE'					: MOVE_TYPE,
+'NONSEQUENTIAL_MOVE_TYPE'	: NONSEQUENTIAL_MOVE_TYPE, 
+'POPULATION_SIZE'			: POPULATION_SIZE, 
+'PRECISION'					: PRECISION,
+'SEED'						: SEED, 
+'TIME_LIMIT'				: TIME_LIMIT, 
+'TRACE_LEVEL'				: TRACE_LEVEL,
+
+$sliderSTOP_AT_OPTIMUM		= $this->request->getParam('sliderSTOP_AT_OPTIMUM');
+$sliderSUBGRADIENT			= $this->request->getParam('sliderSUBGRADIENT');
+$sliderSUBSEQUENT_PATCHING	= $this->request->getParam('sliderSUBSEQUENT_PATCHING');
+$sliderGAIN23				= $this->request->getParam('sliderGAIN23');
+$sliderGAIN_CRITERION		= $this->request->getParam('sliderGAIN_CRITERION');
+$sliderBACKTRACKING			= $this->request->getParam('sliderBACKTRACKING');
+$sliderRESTRICTED_SEARCH	= $this->request->getParam('sliderRESTRICTED_SEARCH');
+$RUNS						= $this->request->getParam('RUNS');
+$BACKBONE_TRIALS			= $this->request->getParam('BACKBONE_TRIALS');
+$KICKS						= $this->request->getParam('KICKS');
+$KICK_TYPE					= $this->request->getParam(KICK_TYPE);
+$MAX_CANDIDATES				= $this->request->getParam('MAX_CANDIDATES');
+$MAX_SWAPS					= $this->request->getParam('MAX_SWAPS');
+$MAX_TRIALS					= $this->request->getParam('MAX_TRIALS');
+$MOVE_TYPE					= $this->request->getParam('MOVE_TYPE');
+$NONSEQUENTIAL_MOVE_TYPE	= $this->request->getParam('NONSEQUENTIAL_MOVE_TYPE');
+$POPULATION_SIZE			= $this->request->getParam('POPULATION_SIZE');
+$PRECISION					= $this->request->getParam('PRECISION');
+$SEED						= $this->request->getParam('SEED');
+$TIME_LIMIT					= $this->request->getParam('TIME_LIMIT');
+$TRACE_LEVEL				= $this->request->getParam('TRACE_LEVEL');
+
+
+	function updateParametros(){
+			var sliderSTOP_AT_OPTIMUM		= $('#sliderSTOP_AT_OPTIMUM').val();	var sliderSUBGRADIENT	  	 	= $('#sliderSUBGRADIENT').val();
+			var sliderSUBSEQUENT_PATCHING	= $('#sliderSUBSEQUENT_PATCHING').val();var sliderGAIN23			 	= $('#sliderGAIN23').val();
+			var sliderGAIN_CRITERION	 	= $('#sliderGAIN_CRITERION').val();		var sliderBACKTRACKING			= $('#sliderBACKTRACKING').val();
+			var sliderRESTRICTED_SEARCH		= $('#sliderRESTRICTED_SEARCH').val();	var RUNS						= $('#RUNS').val();
+			var BACKBONE_TRIALS				= $('#BACKBONE_TRIALS').val();			var KICKS						= $('#KICKS').val();
+			var KICK_TYPE					= $('#KICK_TYPE').val();				var MAX_CANDIDATES				= $('#MAX_CANDIDATES').val();
+			var MAX_SWAPS					= $('#MAX_SWAPS').val();				var MAX_TRIALS					= $('#MAX_TRIALS').val();
+			var MOVE_TYPE					= $('#MOVE_TYPE').val();				var NONSEQUENTIAL_MOVE_TYPE		= $('#NONSEQUENTIAL_MOVE_TYPE').val();
+			var POPULATION_SIZE				= $('#POPULATION_SIZE').val();			var PRECISION 					= $('#PRECISION').val();
+			var SEED 						= $('#SEED').val(); 					var TIME_LIMIT 					= $('#TIME_LIMIT').val();
+			var TRACE_LEVEL 				= $('#TRACE_LEVEL').val();
+			
+			$.getJSON('updateParametros.htm', {	'sliderSTOP_AT_OPTIMUM'		: sliderSTOP_AT_OPTIMUM,	'sliderSUBGRADIENT'			: sliderSUBGRADIENT, 
+												'sliderSUBSEQUENT_PATCHING'	: sliderSUBSEQUENT_PATCHING,'sliderGAIN23'				: sliderGAIN23, 
+												'sliderGAIN_CRITERION'		: sliderGAIN_CRITERION, 	'sliderBACKTRACKING'		: sliderBACKTRACKING,
+												'sliderRESTRICTED_SEARCH'	: sliderRESTRICTED_SEARCH, 	'RUNS'						: RUNS, 
+												'BACKBONE_TRIALS'			: BACKBONE_TRIALS,			'KICKS'						: KICKS, 
+												'KICK_TYPE'					: KICK_TYPE, 				'MAX_CANDIDATES'			: MAX_CANDIDATES,
+												'MAX_SWAPS'					: MAX_SWAPS, 				'MAX_TRIALS'				: MAX_TRIALS, 
+												'MOVE_TYPE'					: MOVE_TYPE,				'NONSEQUENTIAL_MOVE_TYPE'	: NONSEQUENTIAL_MOVE_TYPE, 
+												'POPULATION_SIZE'			: POPULATION_SIZE, 			'PRECISION'					: PRECISION,
+												'SEED'						: SEED, 					'TIME_LIMIT'				: TIME_LIMIT, 
+												'TRACE_LEVEL'				: TRACE_LEVEL,})
+			.fail(function(){alert("Error");})
+			.done(function(d){
+				location.reload();
+			});
+		}
+
+			/**
+     * @ClassDependency: { 'model.UpdateTxt' }
+     */
+	public function updateParametros(){
+	
+		$sliderSTOP_AT_OPTIMUM		= $this->request->getParam('sliderSTOP_AT_OPTIMUM');
+		$sliderSUBGRADIENT			= $this->request->getParam('sliderSUBGRADIENT');
+		$sliderSUBSEQUENT_PATCHING	= $this->request->getParam('sliderSUBSEQUENT_PATCHING');
+		$sliderGAIN23				= $this->request->getParam('sliderGAIN23');
+		$sliderGAIN_CRITERION		= $this->request->getParam('sliderGAIN_CRITERION');
+		$sliderBACKTRACKING			= $this->request->getParam('sliderBACKTRACKING');
+		$sliderRESTRICTED_SEARCH	= $this->request->getParam('sliderRESTRICTED_SEARCH');
+		$RUNS						= $this->request->getParam('RUNS');
+		$BACKBONE_TRIALS			= $this->request->getParam('BACKBONE_TRIALS');
+		$KICKS						= $this->request->getParam('KICKS');
+		$KICK_TYPE					= $this->request->getParam('KICK_TYPE');
+		$MAX_CANDIDATES				= $this->request->getParam('MAX_CANDIDATES');
+		$MAX_SWAPS					= $this->request->getParam('MAX_SWAPS');
+		$MAX_TRIALS					= $this->request->getParam('MAX_TRIALS');
+		$MOVE_TYPE					= $this->request->getParam('MOVE_TYPE');
+		$NONSEQUENTIAL_MOVE_TYPE	= $this->request->getParam('NONSEQUENTIAL_MOVE_TYPE');
+		$POPULATION_SIZE			= $this->request->getParam('POPULATION_SIZE');
+		$PRECISION					= $this->request->getParam('PRECISION');
+		$SEED						= $this->request->getParam('SEED');
+		$TIME_LIMIT					= $this->request->getParam('TIME_LIMIT');
+		$TRACE_LEVEL				= $this->request->getParam('TRACE_LEVEL');
+	
+		$txt = "PROBLEM_FILE = C:\wamp\www\LKHV1\instancias\tsp50.tsp
+				MOVE_TYPE = 5
+				PATCHING_C = 3
+				PATCHING_A = 2
+				OUTPUT_TOUR_FILE = C:\wamp\www\LKHV1\instancias\tsp50.txt
+				OPTIMUM = 378032
+				STOP_AT_OPTIMUM = ".$sliderSTOP_AT_OPTIMUM.
+				"SUBGRADIENT = ".$sliderSUBGRADIENT.
+				"SUBSEQUENT_PATCHING = ".$sliderSUBSEQUENT_PATCHING.
+				"GAIN23 = ".$sliderGAIN23.
+				"GAIN_CRITERION = ".$sliderGAIN_CRITERION.
+				"BACKTRACKING = ".$BACKTRACKING.
+				"RESTRICTED_SEARCH = ".$RESTRICTED_SEARCH.
+				"RUNS = ".$RUNS.
+				"BACKBONE_TRIALS = ".$BACKBONE_TRIALS.
+				"KICKS = ".$KICKS.
+				"KICK_TYPE = ".$KICK_TYPE.
+				"MAX_CANDIDATES = ".$MAX_CANDIDATES.
+				"MAX_SWAPS = ".$MAX_SWAPS.
+				"MAX_TRIALS = ".$MAX_TRIALS.
+				"MOVE_TYPE = ".$MOVE_TYPE.
+				"NONSEQUENTIAL_MOVE_TYPE = ".$NONSEQUENTIAL_MOVE_TYPE.
+				"POPULATION_SIZE = ".$POPULATION_SIZE.
+				"PRECISION = ".$PRECISION.
+				"SEED = ".$SEED.
+				"TIME_LIMIT = ".$TIME_LIMIT.;
+				"TRACE_LEVEL = ".$TRACE_LEVEL;
+		var_dump($txt);die;
+		
+		
+	}
+	
+	
+	
+	
+	
+	PROBLEM_FILE = C:\wamp\www\LKHV1\instancias\tsp50.tsp
+OPTIMUM = 378032
+MOVE_TYPE = 5
+PATCHING_C = 3
+PATCHING_A = 2
+RUNS = 10
+BACKBONE_TRIALS = 0
+BACKTRACKING = NO
+GAIN23 = YES
+GAIN_CRITERION = YES
+KICKS = 1
+KICK_TYPE = <entero>
+MAX_CANDIDATES = <entero>
+MAX_SWAPS = <entero> 
+MAX_TRIALS = <entero>
+MOVE_TYPE = <entero>
+NONSEQUENTIAL_MOVE_TYPE = <entero>
+POPULATION_SIZE = <entero>
+PRECISION = <entero>
+RESTRICTED_SEARCH = [SI | NO ]
+SEED = <entero>
+STOP_AT_OPTIMUM = [SI | NO ]
+Subgradiente = [SI | NO ]
+SUBPROBLEM_SIZE = <integer>
+SUBPROBLEM_TOUR_FILE = <string>
+
+SUBSEQUENT_MOVE_TYPE = <integer>
+SUBSEQUENT_PATCHING = { YES | NO }
+
+TIME_LIMIT = <real>
+TRACE_LEVEL = 1
+OUTPUT_TOUR_FILE = C:\wamp\www\LKHV1\instancias\tsp50.txt
+
+
+<div id="tabla3" style="width:25%; margin-left:30px; float:left; margin-top:-25px;">
+					<div class="row header blue">
+						<div class="cell2">STOP_AT_OPTIMUM</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">SUBGRADIENT</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">SUBSEQUENT_PATCHING</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">GAIN23</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">GAIN_CRITERION</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">RESTRICTED_SEARCH</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">RUNS</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">BACKBONE_TRIALS</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">KICKS</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">KICK_TYPE</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">MAX_CANDIDATES</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">MAX_SWAPS</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">MAX_TRIALS</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">MOVE_TYPE</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">NONSEQUENTIAL_MOVE_TYPE</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">POPULATION_SIZE</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">PRECISION</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">SEED</div>
+					</div>
+					<div class="row header blue">
+						<div class="cell2">TIME_LIMIT</div>
+					</div>
+					<div class="row white">
+						<div class="cell2">TRACE_LEVEL</div>
+					</div>
+				</div>
+			</div>
+
